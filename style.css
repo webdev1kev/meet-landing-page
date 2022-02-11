@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* COLORS */
+  --teal: #4d96a9;
+  --purple: #855fb1;
+  --dark-blue: #28283d;
+  --gray-blue: #87879d;
+
+  --blue: #8fe3f9;
+  --light-purple: #d9b8ff;
+  --white: #fafafa;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1,
+h2,
+.overline {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.75rem;
+}
+
+.overline {
+  letter-spacing: 4px;
+}
+
+p {
+  font-size: 1.125rem;
+}
