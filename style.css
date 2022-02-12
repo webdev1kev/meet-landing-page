@@ -14,10 +14,16 @@
   --blue: #8fe3f9;
   --light-purple: #d9b8ff;
   --white: #fafafa;
+  /* MARGIN */
+  --margin: 3rem;
 }
 
 body {
   font-family: "Red Hat Display", sans-serif;
+
+  display: grid;
+  min-height: 100vh;
+  justify-items: center;
 }
 
 h1,
@@ -28,6 +34,7 @@ h2,
 
 h1 {
   font-size: 4rem;
+  line-height: 1;
 }
 
 h2 {
@@ -40,4 +47,24 @@ h2 {
 
 p {
   font-size: 1.125rem;
+}
+
+.logo-frame {
+  margin-top: var(--margin);
+}
+
+.hero-container {
+  width: 100%;
+  margin-top: var(--margin);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta-container {
+  text-align: center;
+  margin: 0 20rem;
+
+  display: grid;
+  justify-items: center;
 }
