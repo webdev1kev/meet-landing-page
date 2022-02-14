@@ -197,7 +197,7 @@ footer {
   color: var(--white);
 
   background: linear-gradient(var(--footer-overlay), var(--footer-overlay)),
-    url(assets/desktop/image-footer.jpg) no-repeat;
+    url("assets/desktop/image-footer.jpg") no-repeat;
 
   background-size: cover;
 
@@ -261,7 +261,7 @@ footer > .download-button:hover {
     text-align: center;
     height: 30rem;
     background: linear-gradient(var(--footer-overlay), var(--footer-overlay)),
-      url(assets/tablet/image-footer.jpg) no-repeat;
+      url("assets/tablet/image-footer.jpg") no-repeat;
     background-size: cover;
     padding-top: 2rem;
   }
