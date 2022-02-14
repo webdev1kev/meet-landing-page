@@ -25,15 +25,20 @@
   --mobile-width: 90%;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Red Hat Display", sans-serif;
   background-color: var(--white);
 
   display: grid;
   place-items: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  position: relative;
   min-width: 345px;
+
   min-height: 100vh;
 }
 
