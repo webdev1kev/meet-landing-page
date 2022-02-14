@@ -20,6 +20,9 @@
   /* MARGIN */
   --small-margin: 3rem;
   --medium-margin: 5rem;
+
+  /* MOBILE-WIDTH */
+  --mobile-width: 90%;
 }
 
 body {
@@ -27,8 +30,11 @@ body {
   background-color: var(--white);
 
   display: grid;
+  place-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 345px;
   min-height: 100vh;
-  justify-items: center;
 }
 
 h1,
@@ -164,18 +170,21 @@ main {
 }
 
 .images-container > .image-frame {
-  width: 15.125rem;
+  width: 100%;
+  max-width: 15.125rem;
 }
 
 section {
   margin-top: var(--medium-margin);
   text-align: center;
-  width: 32rem;
+  max-width: 32rem;
+  min-width: var(--mobile-width);
   height: 16rem;
-  display: flex;
 
+  display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 section > h2 {
@@ -204,6 +213,9 @@ footer > h2 {
 
 footer > p {
   width: 55%;
+
+  min-width: 15rem;
+  max-width: 55%;
 }
 
 footer > .download-button {
@@ -212,4 +224,75 @@ footer > .download-button {
 
 footer > .download-button:hover {
   background-color: var(--light-purple);
+}
+
+.tablet {
+  display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 0.85em;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .hero-container {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .cta-container {
+    margin-top: var(--medium-margin);
+    height: 20rem;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .tablet {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 909px) {
+  footer {
+    grid-auto-flow: row;
+    text-align: center;
+    height: 30rem;
+    background: linear-gradient(var(--footer-overlay), var(--footer-overlay)),
+      url(/assets/tablet/image-footer.jpg) no-repeat;
+    background-size: cover;
+    padding-top: 2rem;
+  }
+
+  .images-container {
+    width: var(--mobile-width);
+    column-gap: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 819px) {
+  .image-frame-mobile {
+    transform: scale(1.05);
+  }
+
+  .images-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    grid-auto-flow: row;
+  }
+}
+
+@media only screen and (max-width: 519px) {
+}
+
+@media only screen and (max-width: 474px) {
+  html {
+    font-size: 0.75em;
+  }
+
+  .cta-container {
+    width: var(--mobile-width);
+  }
 }
